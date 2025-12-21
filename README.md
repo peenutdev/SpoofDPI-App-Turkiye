@@ -1,40 +1,41 @@
-<img src="https://github.com/SpoofDPIApp/SpoofDPI-App/raw/main/Other/Readme/Logo.png" width="110" height="110"/>
+<img src="Other/Readme/AppLogo.png" width="128" height="128"/>
 
-# SpoofDPI App
-⬇️ [Скачать бесплатно](https://github.com/SpoofDPIApp/SpoofDPI-App/releases/latest/download/SpoofDPI.App.zip)
+# SpoofDPI App - Türkiye Özel 🇹🇷
 
-Простое в использовании приложение **для Mac**, благодаря которому **YouTube** снова заработает отлично! Реализовано на основе библиотеки [SpoofDPI](https://github.com/xvzc/SpoofDPI) — спасибо большое её автору.
+**Mac** kullanıcıları için interneti özgürleştiren, kullanımı son derece kolay bir uygulama! **YouTube**, **Instagram**, **X (Twitter)** ve diğer sosyal medya platformlarındaki kısıtlamaları aşmak için **Türkiye'ye özel optimize edilmiştir.**
 
-## Как установить
-1. Скачайте архив с последней версией приложения по ссылке выше
-2. Распакуйте скачанный архив
-3. Перенесите распакованное приложение в папку «Программы»
-4. Нажмите на приложении правой кнопкой мыши, выберите «Открыть»\
-(обычным двойным кликом приложение в первый раз запустить не удастся)
-5. Разрешите запуск в появившемся системном предупреждении
-6. Подождите, пока приложение инициализируется
-7. Готово!
+Bu uygulama, harika [SpoofDPI](https://github.com/xvzc/SpoofDPI) kütüphanesini temel alır – yazarına teşekkür ederiz.
+Türkiye optimize edilmiş versiyonu [SpoofDPI-Turkiye](https://github.com/renardozt/SpoofDPI-Turkiye) için teşekkür ederiz.
+Ve ayrica [SpoofDPIApp](https://github.com/SpoofDPIApp/SpoofDPI-App) uygulamasını temel alır – yazarına teşekkür ederiz.
 
-Окно приложения можно не держать постоянно открытым — в системной панели сверху всё равно останется его иконка с изображением очков.
+## Neden Bu Uygulama?
+Türkiye'deki Deep Packet Inspection (DPI) tabanlı engellemeleri aşmak için ince ayar yapılmıştır. Karmaşık terminal komutlarıyla uğraşmanıza gerek yok; sadece uygulamayı çalıştırın ve gerisini ona bırakın.
 
-### Если приложение не запускается
+## Nasıl Kurulur?
+1. Paylasilan uygulama arşivi indirin.
+2. İndirilen arşivi açın (.zip).
+3. Uygulamayı **Uygulamalar (Applications)** klasörüne sürükleyin.
+4. Uygulamaya sağ tıklayın ve **"Aç"** deyin.\
+   *(Güvenlik politikası nedeniyle ilk seferde çift tıklayarak açamayabilirsiniz)*
+5. Çıkan sistem uyarısında **"Aç"** seçeneğine onay verin.
+6. Uygulamanın başlatılmasını bekleyin.
+7. İşte bu kadar!
 
-<img src="https://github.com/SpoofDPIApp/SpoofDPI-App/raw/main/Other/Readme/Error.png" width="416" height="308"/>
+Uygulama penceresini sürekli açık tutmanıza gerek yoktur – arka planda çalışmaya devam eder ve üst menü çubuğundaki (menu bar) gözlük ikonu aracılığıyla yönetilebilir.
 
-К сожалению, на некоторых компьютерах приложение может не запуститься. В таком случае необходимо выполнить следующие дополнительные действия…
+### Eğer uygulama açılmazsa
 
-1. Откройте системный поиск Spotlight\
-(иконка с изображением лупы в правой части системной панели вверху экрана)
-2. Найдите приложение «Терминал» (или «Terminal») и запустите его
-3. В появившемся окне введите команду `xattr -d -r com.apple.quarantine`, добавьте после неё пробел и перетащите файл приложения в прямо в окно терминала
-4. Нажмите клавишу Enter
-5. Снова попытайтесь запустить приложение в соответствии с шагом 4 первоначальной инструкции
+Bazı Mac bilgisayarlarda Apple'ın katı güvenlik politikaları nedeniyle uygulama engellenebilir. Bu durumda şu adımları izleyin:
 
-## Системные требования
+1. **Terminal** uygulamasını açın (Spotlight'ta "Terminal" yazarak bulabilirsiniz).
+2. Şu komutu yazın (sonuna bir boşluk ekleyin): `xattr -d -r com.apple.quarantine `
+3. Uygulama dosyasını (Uygulamalar klasöründeki SpoofDPI App) terminal penceresine sürükleyip bırakın.
+4. **Enter** tuşuna basın.
+5. Şimdi uygulamayı normal şekilde tekrar çalıştırmayı deneyin.
 
-- Чип Apple Silicon или процессор Intel
-- macOS 13 Ventura или новее
+## Sistem Gereksinimleri
+- Apple Silicon (M1, M2, M3 vs.) veya Intel işlemci.
+- macOS 13 Ventura veya daha yeni bir sürüm.
 
-## Заключение
-
-Если приложение вам понравилось, пожалуйста, поставьте звёздочку репозиторию вверху-справа этой страницы. Большое спасибо! 👍
+## Destek
+Uygulamayı beğendiyseniz, lütfen sayfanın sağ üst köşesinden repoya bir yıldız (⭐️) verin. Keyifli kullanımlar! 👍

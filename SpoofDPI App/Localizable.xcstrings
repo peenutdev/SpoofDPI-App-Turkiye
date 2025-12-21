@@ -1,19 +1,13 @@
 {
-  "sourceLanguage" : "en",
+  "sourceLanguage" : "tr",
   "strings" : {
     "MenuBarIcon.OpenButton.Template" : {
       "extractionState" : "manual",
       "localizations" : {
-        "en" : {
+        "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Open %@"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Открыть %@"
+            "value" : "Açık %@"
           }
         }
       }
@@ -21,16 +15,10 @@
     "MenuBarIcon.ProtectionToggle" : {
       "extractionState" : "manual",
       "localizations" : {
-        "en" : {
+        "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "DPI protection"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Защита от DPI"
+            "value" : "DPI Koruması"
           }
         }
       }
@@ -38,16 +26,10 @@
     "MenuBarIcon.QuitButton" : {
       "extractionState" : "manual",
       "localizations" : {
-        "en" : {
+        "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Quit"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Завершить"
+            "value" : "Çık"
           }
         }
       }
@@ -55,16 +37,10 @@
     "Scene.Main.AboutWindow.RepositoryButton" : {
       "extractionState" : "manual",
       "localizations" : {
-        "en" : {
+        "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Repository on GitHub"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Репозиторий на GitHub"
+            "value" : "Github’da Bak!"
           }
         }
       }
@@ -72,16 +48,10 @@
     "Scene.Main.MenuBar.AboutButton.Template" : {
       "extractionState" : "manual",
       "localizations" : {
-        "en" : {
+        "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "About %@"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "О приложении %@"
+            "value" : "Hakkında %@"
           }
         }
       }
@@ -89,16 +59,10 @@
     "Scene.Main.MenuBar.RepositoryButton" : {
       "extractionState" : "manual",
       "localizations" : {
-        "en" : {
+        "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Repository on GitHub"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Репозиторий на GitHub"
+            "value" : "Github’a da bak!"
           }
         }
       }
@@ -106,16 +70,10 @@
     "Scene.Main.MenuBar.UpdatesButton" : {
       "extractionState" : "manual",
       "localizations" : {
-        "en" : {
+        "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Check for Updates"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Проверить обновления"
+            "value" : "Güncellemeleri Denetle"
           }
         }
       }
@@ -123,16 +81,10 @@
     "Scene.Main.ProtectionToggle" : {
       "extractionState" : "manual",
       "localizations" : {
-        "en" : {
+        "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "DPI protection"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Защита от DPI"
+            "value" : "DPI Koruması"
           }
         }
       }
@@ -140,16 +92,10 @@
     "Scene.Main.SettingsAlert.Buttons.Cancel" : {
       "extractionState" : "manual",
       "localizations" : {
-        "en" : {
+        "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Cancel"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Отменить"
+            "value" : "İptal"
           }
         }
       }
@@ -157,16 +103,10 @@
     "Scene.Main.SettingsAlert.Buttons.Save" : {
       "extractionState" : "manual",
       "localizations" : {
-        "en" : {
+        "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Save"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Сохранить"
+            "value" : "Kaydet"
           }
         }
       }
@@ -174,16 +114,10 @@
     "Scene.Main.SettingsAlert.LibraryParameters" : {
       "extractionState" : "manual",
       "localizations" : {
-        "en" : {
+        "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "SpoofDPI launch parameters"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Параметры запуска SpoofDPI"
+            "value" : "SpoofDPI başlatma parametreleri"
           }
         }
       }
@@ -191,16 +125,10 @@
     "Scene.Main.Status.Active" : {
       "extractionState" : "manual",
       "localizations" : {
-        "en" : {
+        "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Active!"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Активно!"
+            "value" : "Aktif!"
           }
         }
       }
@@ -208,16 +136,10 @@
     "Scene.Main.Status.Initialization" : {
       "extractionState" : "manual",
       "localizations" : {
-        "en" : {
+        "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Initialization…"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Инициализация…"
+            "value" : "Başlatılıyor…"
           }
         }
       }
@@ -225,16 +147,10 @@
     "Scene.Main.Toggles.AutomaticLaunch" : {
       "extractionState" : "manual",
       "localizations" : {
-        "en" : {
+        "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Launch automatically"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Запускать автоматически"
+            "value" : "Otomatik başlat"
           }
         }
       }
@@ -242,16 +158,10 @@
     "Scene.Main.Toggles.MenuBarIcon" : {
       "extractionState" : "manual",
       "localizations" : {
-        "en" : {
+        "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Show in Menu Bar"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Иконка в строке меню"
+            "value" : "Menü çubuğunda göster"
           }
         }
       }
@@ -259,16 +169,10 @@
     "Scene.Main.VPNHint" : {
       "extractionState" : "manual",
       "localizations" : {
-        "en" : {
+        "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Please turn off VPN"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Пожалуйста, выключите VPN"
+            "value" : "Lütfen VPN'i kapatın"
           }
         }
       }
@@ -276,16 +180,10 @@
     "Updates.Alert.Buttons.Close" : {
       "extractionState" : "manual",
       "localizations" : {
-        "en" : {
+        "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Close"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Закрыть"
+            "value" : "Kapat"
           }
         }
       }
@@ -293,16 +191,10 @@
     "Updates.Alert.Buttons.Update" : {
       "extractionState" : "manual",
       "localizations" : {
-        "en" : {
+        "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Update"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Обновить"
+            "value" : "Güncelle"
           }
         }
       }
@@ -310,16 +202,10 @@
     "Updates.Alert.Description" : {
       "extractionState" : "manual",
       "localizations" : {
-        "en" : {
+        "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "You are using an outdated version of the app. It may work inefficiently."
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Вы используете неактуальную версию приложения. Она может работать неэффективно."
+            "value" : "Eski bir versiyonunuz var! Verimsiz çalışabilir!"
           }
         }
       }
@@ -327,16 +213,10 @@
     "Updates.Alert.Title.Template" : {
       "extractionState" : "manual",
       "localizations" : {
-        "en" : {
+        "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Update %@"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Обновите %@"
+            "value" : "Güncelle %@"
           }
         }
       }

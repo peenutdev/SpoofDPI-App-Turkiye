@@ -8,8 +8,7 @@ import Foundation
 extension Locale {
     static func getSupportedLanguage() -> SupportedLanguage {
         let codes: [String: SupportedLanguage] = [
-            "en": .english,
-            "ru": .russian
+            "tr": .turkish
         ]
         
         return preferredLanguages.compactMap {
@@ -22,7 +21,6 @@ extension Locale {
     }
     
     enum SupportedLanguage {
-        case english
-        case russian
+        case turkish
     }
 }

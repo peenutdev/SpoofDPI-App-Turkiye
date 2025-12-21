@@ -40,10 +40,6 @@ struct MainScene: Scene {
                 Button(LocalizedString.MenuBar.repositoryButton) {
                     NSWorkspace.shared.open(Constants.repositoryURL)
                 }
-                
-                Button(Constants.supportEmailAddress) {
-                    NSWorkspace.shared.open(Constants.supportEmailURL)
-                }
             }
         }
     }
@@ -55,24 +51,14 @@ struct MainScene: Scene {
         paragraphStyle.lineSpacing = 4
         
         let firstLink = LocalizedString.AboutWindow.repositoryButton
-        let secondLink = Constants.supportEmailAddress
         
-        [firstLink, "\n", secondLink]
+        [firstLink]
             .map {
-                var attributes: [NSAttributedString.Key: Any] = [
+                let attributes: [NSAttributedString.Key: Any] = [
                     .paragraphStyle: paragraphStyle,
-                    .underlineColor: NSColor.clear
+                    .underlineColor: NSColor.clear,
+                    .link: Constants.repositoryURL
                 ]
-                
-                switch $0 {
-                    case firstLink:
-                        attributes[.link] = Constants.repositoryURL
-                    case secondLink:
-                        attributes[.link] = Constants.supportEmailURL
-                        
-                    default:
-                        break
-                }
                 
                 return NSAttributedString(string: $0, attributes: attributes)
             }.forEach {

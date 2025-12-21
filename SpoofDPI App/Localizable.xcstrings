@@ -7,7 +7,7 @@
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Açık %@"
+            "value" : "%@ Açık"
           }
         }
       }
@@ -29,7 +29,7 @@
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Çık"
+            "value" : "Uygulamayı Kapat"
           }
         }
       }
@@ -40,7 +40,7 @@
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Github’da Bak!"
+            "value" : "Github’da Görüntüle!"
           }
         }
       }
@@ -51,7 +51,7 @@
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Hakkında %@"
+            "value" : "%@ Hakkında"
           }
         }
       }
@@ -62,7 +62,7 @@
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Github’a da bak!"
+            "value" : "Github’da Görüntüle!"
           }
         }
       }
@@ -216,7 +216,7 @@
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Güncelle %@"
+            "value" : "%@’yi Güncelle"
           }
         }
       }

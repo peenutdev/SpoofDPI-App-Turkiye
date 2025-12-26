@@ -33,10 +33,17 @@ final class UpdateService: ObservableObject {
     }
     
     func checkAvailability() {
-        DispatchQueue.global(qos: .utility).async {
+        let configuration = URLSessionConfiguration.ephemeral
+        configuration.timeoutIntervalForRequest = 10
+        
+        let session = URLSession(configuration: configuration)
+        
+        session.dataTask(with: Constants.actualBuildNumberURL) { [weak self] data, _, _ in
             guard
-                let data = try? String(contentsOf: Constants.actualBuildNumberURL),
-                let actualBuildNumber = Int(data)
+                let self,
+                let data,
+                let text = String(data: data, encoding: .utf8),
+                let actualBuildNumber = Int(text.trimmingCharacters(in: .whitespacesAndNewlines))
             else {
                 return
             }
@@ -45,7 +52,7 @@ final class UpdateService: ObservableObject {
                 self.settingsService.latestKnownActualBuildNumber = actualBuildNumber
                 self.showAlertIfNeeded()
             }
-        }
+        }.resume()
     }
     
     private func showAlertIfNeeded() {

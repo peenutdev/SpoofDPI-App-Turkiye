@@ -4,7 +4,7 @@
         <title>SpoofDPI App</title>
         <item>
             <title>Sürüm 2.1-tr (0.12.0-TR)</title>
-            <pubDate>Mon, 30 Sep 2024 18:00:00 +0300</pubDate>
+            <pubDate>Sun, 18 Jan 2026 23:00:00 +0300</pubDate>
             <sparkle:version>10</sparkle:version>
             <sparkle:shortVersionString>2.1</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
@@ -17,7 +17,7 @@
                 </ul>
                 ]]>
             </description>
-            <enclosure url="https://github.com/peenutdev/SpoofDPI-App-Turkiye/releases/download/v2.1/SpoofDPI.App.zip" sparkle:version="10" sparkle:shortVersionString="2.1" type="application/octet-stream" length="0" />
+            <enclosure url="https://github.com/peenutdev/SpoofDPI-App-Turkiye/releases/download/2.1/SpoofDPI.App.zip" sparkle:version="10" sparkle:shortVersionString="2.1" type="application/octet-stream" length="0" />
         </item>
     </channel>
 </rss>

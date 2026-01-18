@@ -17,7 +17,7 @@
                 </ul>
                 ]]>
             </description>
-            <enclosure url="https://github.com/peenutdev/SpoofDPI-App-Turkiye/releases/download/2.1/SpoofDPI.App.zip" sparkle:version="10" sparkle:shortVersionString="2.1" type="application/octet-stream" length="0" />
+            <enclosure url="https://github.com/peenutdev/SpoofDPI-App-Turkiye/releases/download/2.1/SpoofDPI.App.zip" sparkle:version="10" sparkle:shortVersionString="2.1" type="application/octet-stream" length="6683562" sparkle:edSignature="pnSmtRa9ADTB+igSKxm9/on9bq5e173cOOvN2R3WiQtsskGusZvOPT4lWrOskLGIeBN3oUNqGB1nipGa7ijgCw==" />
         </item>
     </channel>
 </rss>

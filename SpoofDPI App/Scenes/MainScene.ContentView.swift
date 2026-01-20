@@ -33,7 +33,6 @@ extension MainScene {
                     .padding(.bottom, 4)
                     .alert("", isPresented: $areSettingsVisible) {
                         let fixLibraryParametersTextFieldInitialStates = {
-                            // Fixes a mysterious SwiftUI bug
                             settingsLibraryParametersTextFieldID += 1
                         }
                         

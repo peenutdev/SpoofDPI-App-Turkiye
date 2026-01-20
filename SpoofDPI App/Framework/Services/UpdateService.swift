@@ -72,15 +72,7 @@ final class UpdateService: NSObject, ObservableObject {
         let parser = XMLParser(data: data)
         let delegate = AppcastXMLDelegate()
         parser.delegate = delegate
-        let success = parser.parse()
-        
-        print("[UpdateService] Parse success: \(success)")
-        if let latestItem = delegate.latestItem {
-            print("[UpdateService] Latest item found - Version: \(latestItem.version), String: \(latestItem.shortVersionString)")
-        } else {
-            print("[UpdateService] No latest item found")
-        }
-        
+        parser.parse()
         return delegate.latestItem
     }
 
@@ -92,7 +84,7 @@ final class UpdateService: NSObject, ObservableObject {
         windowService.isMainWindowVisible = true
 
         let isUpdateAvailable = currentBuildNumber < item.version
-        print("[UpdateService] Current: \(currentBuildNumber), Latest: \(item.version), Available: \(isUpdateAvailable)")
+        
         let alert = NSAlert().with {
             if isUpdateAvailable {
                 typealias LocalizedString = SpoofDPI_App.LocalizedString.Updates.Alert
@@ -150,16 +142,10 @@ private class AppcastXMLDelegate: NSObject, XMLParserDelegate {
         let trimmed = string.trimmingCharacters(in: .whitespacesAndNewlines)
         guard !trimmed.isEmpty else { return }
         
-        print("[AppcastXMLDelegate] Element: \(currentElement), Value: \(trimmed)")
-        
         switch currentElement {
-        case "sparkle:shortVersionString":
+        case "sparkle:shortVersionString", "shortVersionString":
             shortVersionString = trimmed
-        case "shortVersionString":
-            shortVersionString = trimmed
-        case "sparkle:version":
-            version = Int(trimmed) ?? 0
-        case "version":
+        case "sparkle:version", "version":
             version = Int(trimmed) ?? 0
         case "description":
             releaseNotes = trimmed
@@ -174,21 +160,18 @@ private class AppcastXMLDelegate: NSObject, XMLParserDelegate {
         namespaceURI: String?,
         qualifiedName qName: String?
     ) {
-        if elementName == "item" {
-            // Only set latestItem if we haven't found one yet (first item is latest)
-            if !foundFirstItem, let downloadURL = downloadURL, version > 0 {
-                latestItem = AppcastItem(
-                    shortVersionString: shortVersionString,
-                    version: version,
-                    downloadURL: downloadURL,
-                    releaseNotes: releaseNotes
-                )
-                foundFirstItem = true
-            }
+        if elementName == "item", !foundFirstItem, let downloadURL = downloadURL, version > 0 {
+            latestItem = AppcastItem(
+                shortVersionString: shortVersionString,
+                version: version,
+                downloadURL: downloadURL,
+                releaseNotes: releaseNotes
+            )
+            foundFirstItem = true
             
             shortVersionString = ""
             version = 0
-            downloadURL = nil
+            self.downloadURL = nil
             releaseNotes = ""
         }
     }

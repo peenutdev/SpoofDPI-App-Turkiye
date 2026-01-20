@@ -8,8 +8,6 @@ import Foundation
 final class Utils {
     private init() { }
     
-
-    
     static func getDeviceArchitecture() -> SupportedArchitecture {
         #if arch(arm64)
         return .arm

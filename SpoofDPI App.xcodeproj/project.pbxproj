@@ -29,8 +29,7 @@
 		57A420A12C6288E000639250 /* UpdateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A420A02C6288E000639250 /* UpdateService.swift */; };
 		57D9BC042C6BA1EE003EEDC0 /* Configurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D9BC032C6BA1EE003EEDC0 /* Configurable.swift */; };
 		57D9BC062C6BA23A003EEDC0 /* NSObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D9BC052C6BA23A003EEDC0 /* NSObject.swift */; };
-		6FB6B0362F1D70BB00E21CFB /* Sparkle in Frameworks */ = {isa = PBXBuildFile; productRef = 6FB6B0352F1D70BB00E21CFB /* Sparkle */; };
-/* End PBXBuildFile section */
+		/* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		57A420312C60D98500639250 /* SpoofDPI App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SpoofDPI App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -61,14 +60,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		57A4202E2C60D98500639250 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6FB6B0362F1D70BB00E21CFB /* Sparkle in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
+57A4202E2C60D98500639250 /* Frameworks */ = {
+	isa = PBXFrameworksBuildPhase;
+	buildActionMask = 2147483647;
+	files = (
+	);
+	runOnlyForDeploymentPostprocessing = 0;
+};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -415,7 +413,7 @@
 				);
 				LOCALIZED_STRING_SWIFTUI_SUPPORT = NO;
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
-				MARKETING_VERSION = 2.2;
+				MARKETING_VERSION = 2.3;
 				PRODUCT_BUNDLE_IDENTIFIER = "SpoofDPI-Turkiye";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
@@ -445,7 +443,7 @@
 				);
 				LOCALIZED_STRING_SWIFTUI_SUPPORT = NO;
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
-				MARKETING_VERSION = 2.2;
+				MARKETING_VERSION = 2.3;
 				PRODUCT_BUNDLE_IDENTIFIER = "SpoofDPI-Turkiye";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
@@ -477,22 +475,9 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		6FB6B0342F1D70BB00E21CFB /* XCRemoteSwiftPackageReference "Sparkle" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/sparkle-project/Sparkle";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.8.1;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		6FB6B0352F1D70BB00E21CFB /* Sparkle */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 6FB6B0342F1D70BB00E21CFB /* XCRemoteSwiftPackageReference "Sparkle" */;
-			productName = Sparkle;
-		};
 /* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 57A420292C60D98500639250 /* Project object */;

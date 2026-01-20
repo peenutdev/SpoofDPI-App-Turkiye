@@ -10,6 +10,7 @@ enum Constants {
     static let updatesCheckingFrequency: TimeInterval = 259200  // 3 days
 
     static let repositoryURL = URL(string: "https://github.com/peenutdev/SpoofDPI-App-Turkiye")!
+    static let releasesURL = URL(string: "https://github.com/peenutdev/SpoofDPI-App-Turkiye/releases")!
     static let appcastURL = URL(
         string: "https://raw.githubusercontent.com/peenutdev/SpoofDPI-App-Turkiye/main/appcast.xml")!
     static let actualBuildNumberURL = URL(

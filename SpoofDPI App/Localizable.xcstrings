@@ -1,226 +1,259 @@
 {
-  "sourceLanguage" : "tr",
-  "strings" : {
-    "MenuBarIcon.OpenButton.Template" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@ Açık"
+  "sourceLanguage": "tr",
+  "strings": {
+    "MenuBarIcon.OpenButton.Template": {
+      "extractionState": "manual",
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ Açık"
           }
         }
       }
     },
-    "MenuBarIcon.ProtectionToggle" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "DPI Koruması"
+    "MenuBarIcon.ProtectionToggle": {
+      "extractionState": "manual",
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "DPI Koruması"
           }
         }
       }
     },
-    "MenuBarIcon.QuitButton" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Uygulamayı Kapat"
+    "MenuBarIcon.QuitButton": {
+      "extractionState": "manual",
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Uygulamayı Kapat"
           }
         }
       }
     },
-    "Scene.Main.AboutWindow.RepositoryButton" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Github’da Görüntüle!"
+    "Scene.Main.AboutWindow.RepositoryButton": {
+      "extractionState": "manual",
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Github’da Görüntüle!"
           }
         }
       }
     },
-    "Scene.Main.MenuBar.AboutButton.Template" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@ Hakkında"
+    "Scene.Main.MenuBar.AboutButton.Template": {
+      "extractionState": "manual",
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ Hakkında"
           }
         }
       }
     },
-    "Scene.Main.MenuBar.RepositoryButton" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Github’da Görüntüle!"
+    "Scene.Main.MenuBar.RepositoryButton": {
+      "extractionState": "manual",
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Github’da Görüntüle!"
           }
         }
       }
     },
-    "Scene.Main.MenuBar.UpdatesButton" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Güncellemeleri Denetle"
+    "Scene.Main.MenuBar.UpdatesButton": {
+      "extractionState": "manual",
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Güncellemeleri Denetle"
           }
         }
       }
     },
-    "Scene.Main.ProtectionToggle" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "DPI Koruması"
+    "Scene.Main.ProtectionToggle": {
+      "extractionState": "manual",
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "DPI Koruması"
           }
         }
       }
     },
-    "Scene.Main.SettingsAlert.Buttons.Cancel" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "İptal"
+    "Scene.Main.SettingsAlert.Buttons.Cancel": {
+      "extractionState": "manual",
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "İptal"
           }
         }
       }
     },
-    "Scene.Main.SettingsAlert.Buttons.Save" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kaydet"
+    "Scene.Main.SettingsAlert.Buttons.Save": {
+      "extractionState": "manual",
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kaydet"
           }
         }
       }
     },
-    "Scene.Main.SettingsAlert.LibraryParameters" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "SpoofDPI başlatma parametreleri"
+    "Scene.Main.SettingsAlert.LibraryParameters": {
+      "extractionState": "manual",
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "SpoofDPI başlatma parametreleri"
           }
         }
       }
     },
-    "Scene.Main.Status.Active" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Aktif!"
+    "Scene.Main.Status.Active": {
+      "extractionState": "manual",
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aktif!"
           }
         }
       }
     },
-    "Scene.Main.Status.Initialization" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Başlatılıyor…"
+    "Scene.Main.Status.Initialization": {
+      "extractionState": "manual",
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Başlatılıyor…"
           }
         }
       }
     },
-    "Scene.Main.Toggles.AutomaticLaunch" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Otomatik başlat"
+    "Scene.Main.Toggles.AutomaticLaunch": {
+      "extractionState": "manual",
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Otomatik başlat"
           }
         }
       }
     },
-    "Scene.Main.Toggles.MenuBarIcon" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Menü çubuğunda göster"
+    "Scene.Main.Toggles.MenuBarIcon": {
+      "extractionState": "manual",
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Menü çubuğunda göster"
           }
         }
       }
     },
-    "Scene.Main.VPNHint" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Lütfen VPN'i kapatın"
+    "Scene.Main.VPNHint": {
+      "extractionState": "manual",
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lütfen VPN'i kapatın"
           }
         }
       }
     },
-    "Updates.Alert.Buttons.Close" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kapat"
+    "Updates.Alert.Buttons.Close": {
+      "extractionState": "manual",
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kapat"
           }
         }
       }
     },
-    "Updates.Alert.Buttons.Update" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Güncelle"
+    "Updates.Alert.Buttons.Update": {
+      "extractionState": "manual",
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Güncelle"
           }
         }
       }
     },
-    "Updates.Alert.Description" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Eski bir versiyonunuz var! Verimsiz çalışabilir!"
+    "Updates.Alert.Description": {
+      "extractionState": "manual",
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Eski bir versiyonunuz var! Verimsiz çalışabilir!"
           }
         }
       }
     },
-    "Updates.Alert.Title.Template" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@’yi Güncelle"
+    "Updates.Alert.Title.Template": {
+      "extractionState": "manual",
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@’yi Güncelle"
+          }
+        }
+      }
+    },
+    "Updates.UpToDate.Title": {
+      "extractionState": "manual",
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Güncel Sürüm"
+          }
+        }
+      }
+    },
+    "Updates.UpToDate.Description.Template": {
+      "extractionState": "manual",
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "En son versiyonu kullanıyorsunuz (v%@)"
+          }
+        }
+      }
+    },
+    "Updates.UpToDate.Buttons.OK": {
+      "extractionState": "manual",
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tamam"
           }
         }
       }
     }
   },
-  "version" : "1.0"
+  "version": "1.0"
 }

@@ -16,13 +16,15 @@ struct MainScene: Scene {
     var body: some Scene {
         let appName = Bundle.main.name
         
-        return Window(appName, id: id) {
-            ContentView()
+        return Group {
+            Window(appName, id: id) {
+                ContentView()
+            }
+            .defaultPosition(.center)
+            .windowResizability(.contentSize)
         }
-        .defaultPosition(.center)
-        .windowResizability(.contentSize)
         .commands {
-            CommandGroup (replacing: .appInfo) {
+            CommandGroup(replacing: .appInfo) {
                 Button(
                     LocalizedString.MenuBar.aboutButton(appName: appName)
                 ) {
@@ -36,7 +38,7 @@ struct MainScene: Scene {
             
             CommandGroup(replacing: .windowSize) { }
             
-            CommandGroup (replacing: .help) {
+            CommandGroup(replacing: .help) {
                 Button(LocalizedString.MenuBar.repositoryButton) {
                     NSWorkspace.shared.open(Constants.repositoryURL)
                 }

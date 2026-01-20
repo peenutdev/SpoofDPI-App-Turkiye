@@ -5,7 +5,7 @@
         <item>
             <title>Sürüm 2.3 (0.12.0-TR)</title>
             <pubDate>Tue, 20 Jan 2026 13:00:00 +0300</pubDate>
-            <sparkle:version>12</sparkle:version>
+            <sparkle:version>11</sparkle:version>
             <sparkle:shortVersionString>2.3</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <description>
@@ -23,7 +23,7 @@
                 </ul>
                 ]]>
             </description>
-            <enclosure url="https://github.com/peenutdev/SpoofDPI-App-Turkiye/releases/download/2.3-tr/SpoofDPI.App.zip" sparkle:version="12" sparkle:shortVersionString="2.3-tr" type="application/octet-stream" length="6684280" sparkle:edSignature="QxmsgM3IKQPbq8bdsIE7Sf8wy9VZsTQfKTzfBYeZ7ANuDhxvEuzYeg+RpIHFp1zoeIKBZqTDUIRAShn9oFSDDg==" />
+            <enclosure url="https://github.com/peenutdev/SpoofDPI-App-Turkiye/releases/download/2.3-tr/SpoofDPI.App.zip" sparkle:version="11" sparkle:shortVersionString="2.3" type="application/octet-stream" length="6684280" sparkle:edSignature="QxmsgM3IKQPbq8bdsIE7Sf8wy9VZsTQfKTzfBYeZ7ANuDhxvEuzYeg+RpIHFp1zoeIKBZqTDUIRAShn9oFSDDg==" />
         </item>
     </channel>
 </rss>

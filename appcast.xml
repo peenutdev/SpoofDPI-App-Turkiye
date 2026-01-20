@@ -25,23 +25,5 @@
             </description>
             <enclosure url="https://github.com/peenutdev/SpoofDPI-App-Turkiye/releases/download/2.3-tr/SpoofDPI.App.zip" sparkle:version="12" sparkle:shortVersionString="2.3-tr" type="application/octet-stream" length="6684280" sparkle:edSignature="QxmsgM3IKQPbq8bdsIE7Sf8wy9VZsTQfKTzfBYeZ7ANuDhxvEuzYeg+RpIHFp1zoeIKBZqTDUIRAShn9oFSDDg==" />
         </item>
-        <item>
-            <title>Sürüm 2.2 (0.12.0-TR)</title>
-            <pubDate>Tue, 20 Jan 2026 12:00:00 +0300</pubDate>
-            <sparkle:version>11</sparkle:version>
-            <sparkle:shortVersionString>2.2</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
-            <description>
-                <![CDATA[
-                <h2>Yenilikler</h2>
-                <ul>
-                    <li>Menü çubuğu sorunları düzeltildi.</li>
-                    <li>Performans iyileştirmeleri ve hata düzeltmeleri yapıldı.</li>
-                    <li>Sürüm 2.2 (0.12.0-TR) güncellemesi.</li>
-                </ul>
-                ]]>
-            </description>
-            <enclosure url="https://github.com/peenutdev/SpoofDPI-App-Turkiye/releases/download/2.2/SpoofDPI.App.zip" sparkle:version="11" sparkle:shortVersionString="2.2" type="application/octet-stream" length="6684280" sparkle:edSignature="QxmsgM3IKQPbq8bdsIE7Sf8wy9VZsTQfKTzfBYeZ7ANuDhxvEuzYeg+RpIHFp1zoeIKBZqTDUIRAShn9oFSDDg==" />
-        </item>
     </channel>
 </rss>

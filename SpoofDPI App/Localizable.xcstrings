@@ -155,6 +155,17 @@
         }
       }
     },
+    "Scene.Main.Toggles.DockIcon": {
+      "extractionState": "manual",
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dock ikonunu göster"
+          }
+        }
+      }
+    },
     "Scene.Main.Toggles.MenuBarIcon": {
       "extractionState": "manual",
       "localizations": {
@@ -162,6 +173,17 @@
           "stringUnit": {
             "state": "translated",
             "value": "Menü çubuğunda göster"
+          }
+        }
+      }
+    },
+    "Scene.Main.Toggles.VPNSensitivity": {
+      "extractionState": "manual",
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "VPN algılandığında duraklat"
           }
         }
       }

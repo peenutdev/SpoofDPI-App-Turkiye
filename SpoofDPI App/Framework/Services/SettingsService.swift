@@ -7,40 +7,57 @@ import SwiftUI
 
 final class SettingsService: ObservableObject {
     static let instance = SettingsService()
-    
-    private init() { }
-    
+
+    private init() {}
+
     @AppStorage("isProtectionEnabled") private static var isProtectionEnabled = true
-    
+
     @Published var isProtectionEnabled = isProtectionEnabled {
         didSet {
             Self.isProtectionEnabled = isProtectionEnabled
         }
     }
-    
+
     @AppStorage("isAutomaticLaunchEnabled") private static var isAutomaticLaunchEnabled = true
-    
+
     @Published var isAutomaticLaunchEnabled = isAutomaticLaunchEnabled {
         didSet {
             Self.isAutomaticLaunchEnabled = isAutomaticLaunchEnabled
         }
     }
-    
+
     @AppStorage("isMenuBarIconEnabled") private static var isMenuBarIconEnabled = true
-    
+
     @Published var isMenuBarIconEnabled = isMenuBarIconEnabled {
         didSet {
             Self.isMenuBarIconEnabled = isMenuBarIconEnabled
         }
     }
-    
-    @AppStorage("libraryParameters") private static var libraryParameters = Constants.libraryParameters
-    
+
+    @AppStorage("isVPNSensitivityEnabled") private static var isVPNSensitivityEnabled = true
+
+    @Published var isVPNSensitivityEnabled = isVPNSensitivityEnabled {
+        didSet {
+            Self.isVPNSensitivityEnabled = isVPNSensitivityEnabled
+        }
+    }
+
+    @AppStorage("isDockIconEnabled") private static var isDockIconEnabled = false
+
+    @Published var isDockIconEnabled = isDockIconEnabled {
+        didSet {
+            Self.isDockIconEnabled = isDockIconEnabled
+        }
+    }
+
+    @AppStorage("libraryParameters") private static var libraryParameters = Constants
+        .libraryParameters
+
     @Published var libraryParameters = libraryParameters {
         didSet {
             Self.libraryParameters = libraryParameters
         }
     }
-    
+
     @AppStorage("latestKnownActualBuildNumber") var latestKnownActualBuildNumber = 0
 }

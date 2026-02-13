@@ -8,23 +8,25 @@ import SwiftUI
 extension MainScene {
     struct ContentView: View {
         private typealias LocalizedString = SpoofDPI_App.LocalizedString.Scene.Main
-        
+
         @ObservedObject private var protectionService = ProtectionService.instance
         @ObservedObject private var settingsService = SettingsService.instance
-        
+
         @State private var areSettingsVisible = false
-        
+
         @State private var settingsLibraryParameters = ""
         @State private var settingsLibraryParametersTextFieldID = 0
-        
+
         var body: some View {
             VStack(spacing: 14) {
                 HStack {
                     let settingsSymbol = SystemSymbol.gearshape
-                    
-                    Toggle(LocalizedString.protectionToggle, isOn: $settingsService.isProtectionEnabled)
-                        .toggleStyle(.switch)
-                    
+
+                    Toggle(
+                        LocalizedString.protectionToggle, isOn: $settingsService.isProtectionEnabled
+                    )
+                    .toggleStyle(.switch)
+
                     Button("", systemImage: settingsSymbol.name) {
                         settingsLibraryParameters = settingsService.libraryParameters
                         areSettingsVisible = true
@@ -35,21 +37,21 @@ extension MainScene {
                         let fixLibraryParametersTextFieldInitialStates = {
                             settingsLibraryParametersTextFieldID += 1
                         }
-                        
+
                         TextField(
                             LocalizedString.SettingsAlert.libraryParameters,
                             text: $settingsLibraryParameters
                         )
                         .autocorrectionDisabled()
                         .id(settingsLibraryParametersTextFieldID)
-                        
+
                         Button(LocalizedString.SettingsAlert.Buttons.save) {
                             settingsService.libraryParameters = settingsLibraryParameters
-                            
+
                             areSettingsVisible = false
                             fixLibraryParametersTextFieldInitialStates()
                         }
-                        
+
                         Button(LocalizedString.SettingsAlert.Buttons.cancel) {
                             areSettingsVisible = false
                             fixLibraryParametersTextFieldInitialStates()
@@ -59,37 +61,55 @@ extension MainScene {
                         .init(nsImage: settingsSymbol.image)
                     )
                 }
-                
+
                 switch protectionService.status {
-                    case .active:
+                case .active:
+                    HStack(spacing: 6) {
+                        Text("😎")
+
+                        Text(LocalizedString.Status.active)
+                            .bold()
+                    }
+                    .padding(.top, -8)
+
+                case .initializing:
+                    VStack(spacing: 8) {
                         HStack(spacing: 6) {
-                            Text("😎")
-                            
-                            Text(LocalizedString.Status.active)
-                                .bold()
+                            ProgressView()
+                                .controlSize(.small)
+
+                            Text(LocalizedString.Status.initialization)
                         }
-                        .padding(.top, -8)
-                        
-                    case .initializing:
-                        VStack(spacing: 8) {
-                            HStack(spacing: 6) {
-                                ProgressView()
-                                    .controlSize(.small)
-                                
-                                Text(LocalizedString.Status.initialization)
-                            }
-                            
-                            Text(LocalizedString.vpnHint)
-                                .bold()
-                        }
-                        
-                    case .stopped, .unknown:
-                        EmptyView()
+
+                        Text(LocalizedString.vpnHint)
+                            .bold()
+                    }
+
+                case .pausedByVPN:
+                    HStack(spacing: 6) {
+                        Text("🛑")
+                        Text(LocalizedString.vpnHint)
+                            .bold()
+                    }
+                    .padding(.top, -8)
+
+                case .stopped, .unknown:
+                    EmptyView()
                 }
-                
-                VStack {
-                    Toggle(LocalizedString.Toggles.automaticLaunch, isOn: $settingsService.isAutomaticLaunchEnabled)
-                    Toggle(LocalizedString.Toggles.menuBarIcon, isOn: $settingsService.isMenuBarIconEnabled)
+
+                VStack(alignment: .leading) {
+                    Toggle(
+                        LocalizedString.Toggles.automaticLaunch,
+                        isOn: $settingsService.isAutomaticLaunchEnabled)
+                    Toggle(
+                        LocalizedString.Toggles.menuBarIcon,
+                        isOn: $settingsService.isMenuBarIconEnabled)
+                    Toggle(
+                        LocalizedString.Toggles.VPNSensitivity,
+                        isOn: $settingsService.isVPNSensitivityEnabled)
+                    Toggle(
+                        LocalizedString.Toggles.dockIcon,
+                        isOn: $settingsService.isDockIconEnabled)
                 }
             }
             .fixedSize()

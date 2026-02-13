@@ -7,13 +7,6 @@
 import AppKit
 import SwiftUI
 
-struct AppcastItem {
-    let shortVersionString: String
-    let version: Int
-    let downloadURL: URL
-    let releaseNotes: String
-}
-
 final class UpdateService: NSObject, ObservableObject {
     static let instance = UpdateService()
 
@@ -22,7 +15,7 @@ final class UpdateService: NSObject, ObservableObject {
 
     override init() {
         super.init()
-        
+
         guard !ProcessInfo.isPreview else {
             return
         }
@@ -30,23 +23,23 @@ final class UpdateService: NSObject, ObservableObject {
         DispatchQueue.main.asyncAfter(
             deadline: .now() + 1
         ) {
-            self.checkAvailability()
+            self.checkAvailability(isManual: false)
         }
 
         let timer = Timer.scheduledTimer(
             withTimeInterval: Constants.updatesCheckingFrequency,
             repeats: true
         ) { [weak self] _ in
-            self?.checkAvailability()
+            self?.checkAvailability(isManual: false)
         }
 
         RunLoop.main.add(timer, forMode: .common)
     }
 
-    func checkAvailability() {
-        var urlRequest = URLRequest(url: Constants.appcastURL)
+    func checkAvailability(isManual: Bool) {
+        var urlRequest = URLRequest(url: Constants.actualBuildNumberURL)
         urlRequest.cachePolicy = .reloadIgnoringLocalAndRemoteCacheData
-        
+
         let configuration = URLSessionConfiguration.ephemeral
         configuration.timeoutIntervalForRequest = 10
         configuration.requestCachePolicy = .reloadIgnoringLocalAndRemoteCacheData
@@ -57,122 +50,60 @@ final class UpdateService: NSObject, ObservableObject {
             guard
                 let self,
                 let data,
-                let latestItem = self.parseAppcast(data)
+                let contents = String(data: data, encoding: .utf8)?.trimmingCharacters(
+                    in: .whitespacesAndNewlines),
+                let latestBuildNumber = Int(contents)
             else {
                 return
             }
 
             DispatchQueue.main.async {
-                self.showAlertIfNeeded(with: latestItem)
+                self.showAlertIfNeeded(latestBuildNumber: latestBuildNumber, isManual: isManual)
             }
         }.resume()
     }
 
-    private func parseAppcast(_ data: Data) -> AppcastItem? {
-        let parser = XMLParser(data: data)
-        let delegate = AppcastXMLDelegate()
-        parser.delegate = delegate
-        parser.parse()
-        return delegate.latestItem
-    }
-
-    private func showAlertIfNeeded(with item: AppcastItem) {
+    private func showAlertIfNeeded(latestBuildNumber: Int, isManual: Bool) {
         guard let currentBuildNumber = Bundle.main.buildNumber else {
             return
         }
 
-        windowService.isMainWindowVisible = true
-
-        let isUpdateAvailable = currentBuildNumber < item.version
-        
-        let alert = NSAlert().with {
-            if isUpdateAvailable {
-                typealias LocalizedString = SpoofDPI_App.LocalizedString.Updates.Alert
-                $0.messageText = LocalizedString.title(appName: Bundle.main.name)
-                $0.informativeText = LocalizedString.description
-                $0.addButton(withTitle: LocalizedString.Buttons.update)
-                $0.addButton(withTitle: LocalizedString.Buttons.close)
-                $0.alertStyle = .warning
-            } else {
-                typealias LocalizedString = SpoofDPI_App.LocalizedString.Updates.UpToDate
-                $0.messageText = LocalizedString.title
-                $0.informativeText = LocalizedString.description(version: item.shortVersionString)
-                $0.addButton(withTitle: LocalizedString.Buttons.ok)
-                $0.alertStyle = .informational
-            }
-        }
+        let isUpdateAvailable = currentBuildNumber < latestBuildNumber
 
         if isUpdateAvailable {
+            windowService.isMainWindowVisible = true
+
+            let alert = NSAlert()
+            typealias Local = LocalizedString.Updates.Alert
+            alert.messageText = Local.title(appName: Bundle.main.name)
+            alert.informativeText = Local.description
+            alert.addButton(withTitle: Local.Buttons.update)
+            alert.addButton(withTitle: Local.Buttons.close)
+            alert.alertStyle = .warning
+
             switch alert.runModal() {
             case .alertFirstButtonReturn:
                 NSWorkspace.shared.open(Constants.releasesURL)
             default:
                 break
             }
-        } else {
+        } else if isManual {
+            windowService.isMainWindowVisible = true
+
+            let alert = NSAlert()
+            typealias Local = LocalizedString.Updates.UpToDate
+            alert.messageText = Local.title
+
+            // We don't have the string version anymore with simple check,
+            // so we just show the build number or a generic "Up to date"
+            let currentVersion =
+                Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String
+                ?? ""
+            alert.informativeText = Local.description(version: currentVersion)
+
+            alert.addButton(withTitle: Local.Buttons.ok)
+            alert.alertStyle = .informational
             alert.runModal()
-        }
-    }
-}
-
-private class AppcastXMLDelegate: NSObject, XMLParserDelegate {
-    var latestItem: AppcastItem?
-    private var currentElement = ""
-    private var shortVersionString = ""
-    private var version = 0
-    private var downloadURL: URL?
-    private var releaseNotes = ""
-    private var foundFirstItem = false
-
-    func parser(
-        _ parser: XMLParser,
-        didStartElement elementName: String,
-        namespaceURI: String?,
-        qualifiedName qName: String?,
-        attributes attributeDict: [String : String] = [:]
-    ) {
-        currentElement = elementName
-        
-        if elementName == "enclosure", let urlString = attributeDict["url"] {
-            downloadURL = URL(string: urlString)
-        }
-    }
-
-    func parser(_ parser: XMLParser, foundCharacters string: String) {
-        let trimmed = string.trimmingCharacters(in: .whitespacesAndNewlines)
-        guard !trimmed.isEmpty else { return }
-        
-        switch currentElement {
-        case "sparkle:shortVersionString", "shortVersionString":
-            shortVersionString = trimmed
-        case "sparkle:version", "version":
-            version = Int(trimmed) ?? 0
-        case "description":
-            releaseNotes = trimmed
-        default:
-            break
-        }
-    }
-
-    func parser(
-        _ parser: XMLParser,
-        didEndElement elementName: String,
-        namespaceURI: String?,
-        qualifiedName qName: String?
-    ) {
-        if elementName == "item", !foundFirstItem, let downloadURL = downloadURL, version > 0 {
-            latestItem = AppcastItem(
-                shortVersionString: shortVersionString,
-                version: version,
-                downloadURL: downloadURL,
-                releaseNotes: releaseNotes
-            )
-            foundFirstItem = true
-            
-            shortVersionString = ""
-            version = 0
-            self.downloadURL = nil
-            releaseNotes = ""
         }
     }
 }

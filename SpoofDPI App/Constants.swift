@@ -5,14 +5,13 @@
 
 import Foundation
 
-enum Constants {
+public enum Constants {
     static let defaultLanguage = Locale.SupportedLanguage.turkish
     static let updatesCheckingFrequency: TimeInterval = 259200  // 3 days
 
     static let repositoryURL = URL(string: "https://github.com/peenutdev/SpoofDPI-App-Turkiye")!
-    static let releasesURL = URL(string: "https://github.com/peenutdev/SpoofDPI-App-Turkiye/releases")!
-    static let appcastURL = URL(
-        string: "https://raw.githubusercontent.com/peenutdev/SpoofDPI-App-Turkiye/main/appcast.xml")!
+    static let releasesURL = URL(
+        string: "https://github.com/peenutdev/SpoofDPI-App-Turkiye/releases")!
     static let actualBuildNumberURL = URL(
         string:
             "https://raw.githubusercontent.com/peenutdev/SpoofDPI-App-Turkiye/main/Other/ActualBuildNumber.txt"
